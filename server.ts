@@ -4,8 +4,6 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import todoRoutes from './route/todo';
 import mongoose from 'mongoose';
-import serverless from 'serverless-http';
-import router from './route/todo';
 
 const main = async () => {
   dotenv.config();
@@ -35,9 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // }
 
 app.use('/api', todoRoutes); //backend router전에 들리는곳
-app.use('/.netlify/functions/api', router);
 
 app.listen(PORT, () => {
   console.log(`Connected to ${PORT}`);
 });
-module.exports.handler = serverless(app);
