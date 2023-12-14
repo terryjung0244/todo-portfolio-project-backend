@@ -3,29 +3,6 @@ import { Request, Response } from 'express';
 import todoSchema from '../schema/todo';
 import { getNanoid } from '../util/getNanoId';
 
-let todos: ITodo[] = [
-  {
-    id: '0',
-    title: 'abc',
-    completed: false,
-  },
-  {
-    id: '1',
-    title: 'awe',
-    completed: true,
-  },
-  {
-    id: '2',
-    title: 'tree',
-    completed: true,
-  },
-];
-
-interface IResponse {
-  message: string;
-  result?: ITodo[] | ITodo;
-}
-
 export const getAllTodos = async (req: Request, res: Response) => {
   try {
     const result: ITodo[] = await todoSchema.find();
