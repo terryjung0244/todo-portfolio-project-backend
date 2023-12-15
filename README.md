@@ -15,32 +15,29 @@ Welcome to the React Todo App! This simple yet powerful task management applicat
 
 = **MongoDB:** MongoDB Atlas를 이용해서 Console 작업 진행해봤다. 데이터가 추가 삭제 등등이 일어날때마다 콘솔에서 변화를 확인할 수 있었다. 그리고 MongoDB를 프로젝트에 Configuration 작업을 완료하였다.
 
-??????????????????????????????????????????????????????????????????????????????
-
 ## Technologies Used
 
 Frontend
 
 - **React:** Utilized for building a modular and dynamic user interface.
-- **Redux:**
+- **Redux:** With Redux, state is stored globally and ensuring a centralized and predictable data flow in the application, enhancing scalability and maintainbility.
 - **Styled-Component:** Styled for a visually appealing and user-friendly experience.
-  **typescript**
-- **testing**
+  **typescript** Enabling early error detection, improved code quality, and enhanced developer productivity through better code.
+- **testing** Made sure the app works well by doing thorough testing with tools like Jest and React Testing Library. Checked different parts of the code, from small pieces to the whole app, to make sure everything is stable and reliable
 
 Backend
 
-- **node.js**
-- **express**
-- **mongodb**
+- **node.js** Node.js is a platform that allows JavaScript to be used for server-side programming, making it possible to build scalable and efficient web applications.
+- **express** Express is a web application framework for Node.js that simplifies the process of building robust and scalable web applications by providing a set of features and tools.
+- **mongoDB** MongoDB is a database management system that stores data in a flexible, JSON-like format. It is known for its scalability and flexibility, making it well-suited for handling large amounts of data in modern applications.
 
 ## Project Structure
 
-- server (package들 import + mongodb configuration)
-- route (들어온 request를 매칭되는 controller로 보내는 역할)
-- controller (실제 작업이 일어나는 곳)
-- schema (mongodb structure 짜는 곳)
-
-????????????????????????????????????????????????????????????????????????????????
+- server : express (NodeJS)
+- Database : MongoDB
+- route : getAllTodos / /getTodoByParams/:id / put / delete
+- controller : getAllTodos / getTodoByParams / getTodoByQuery / createTodo / updateTodo / deleteTodo
+- schema : { id / title / completed }
 
 ## Getting Started
 
